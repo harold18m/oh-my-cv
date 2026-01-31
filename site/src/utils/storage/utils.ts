@@ -14,7 +14,8 @@ const setResumeStyles = async (styles: ResumeStyles) => {
   const { setStyle } = useStyleStore();
 
   for (const [key, value] of Object.entries(styles)) {
-    await setStyle(key as keyof ResumeStyles, value);
+    // Don't mark as changed when loading from storage
+    await setStyle(key as keyof ResumeStyles, value, false);
   }
 };
 
@@ -24,7 +25,7 @@ const setResumeStyles = async (styles: ResumeStyles) => {
  * @param data resume data
  */
 export const setResume = async (data: DbResume) => {
-  const { setData } = useDataStore();
+  const { setData, markAsSaved } = useDataStore();
 
   setData("resumeId", data.id);
   setData("resumeName", data.name);
@@ -33,6 +34,9 @@ export const setResume = async (data: DbResume) => {
   setData("css", data.css);
 
   await setResumeStyles(data.styles);
+
+  // Reset unsaved changes flag after loading
+  markAsSaved();
 };
 
 const _checkType = (value: any, required: string | string[]) => {

@@ -4,9 +4,15 @@
       <template #center>
         <span
           v-if="data.loaded && data.resumeName"
-          class="text-sm text-muted-foreground"
+          class="text-sm text-muted-foreground flex items-center gap-x-2"
         >
-          {{ data.resumeName }}
+          <span>
+            {{ data.resumeName }}<span v-if="data.hasUnsavedChanges && !isSaving" class="text-destructive ml-0.5">*</span>
+          </span>
+          <span v-if="isSaving" class="text-xs text-muted-foreground/70 flex items-center gap-x-1">
+            <span class="i-tabler:loader-2 animate-spin" />
+            {{ $t("autosave.saving") }}
+          </span>
         </span>
       </template>
 
@@ -64,6 +70,7 @@
 
 <script lang="ts" setup>
 import { isInteger } from "@renovamen/utils";
+import { useAutosave } from "~/composables/autosave";
 
 const route = useRoute();
 const { data } = useDataStore();
@@ -74,6 +81,9 @@ onMounted(() => {
     storageService.switchToResume(Number(route.params.id));
   }
 });
+
+// Autosave
+const { isSaving } = useAutosave();
 
 // Toogle toolbar
 const { width } = useWindowSize();

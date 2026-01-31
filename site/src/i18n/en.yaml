@@ -1,5 +1,8 @@
 lang: Language
 
+autosave:
+  saving: Saving...
+
 toggle_theme: Toggle theme
 open_toolbar: Open toolbar
 close_toolbar: Close toolbar
@@ -29,6 +32,21 @@ dashboard:
   rename: Rename
   duplicate: Duplicate
   delete: Delete
+  delete_confirm:
+    title: Delete CV?
+    description: This action cannot be undone. The CV "{name}" will be permanently deleted.
+    cancel: Cancel
+    confirm: Delete
+  search: Search CVs...
+  sort:
+    label: Sort
+    updated_desc: Updated (newest)
+    updated_asc: Updated (oldest)
+    created_desc: Created (newest)
+    created_asc: Created (oldest)
+    name_asc: Name (A-Z)
+    name_desc: Name (Z-A)
+  no_results: No CVs found
 
 toolbar:
   file:

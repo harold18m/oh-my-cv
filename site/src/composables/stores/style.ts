@@ -18,7 +18,8 @@ export const useStyleStore = defineStore("style", () => {
 
   const setStyle = async <T extends keyof ResumeStyles>(
     key: T,
-    value: ResumeStyles[T]
+    value: ResumeStyles[T],
+    markAsChanged = true
   ) => {
     // handle Google fonts
     if (key === "fontEN") {
@@ -31,6 +32,12 @@ export const useStyleStore = defineStore("style", () => {
     // update CSS
     // vue-smart-pages will handle margins, height and width
     if (!["marginV", "marginH"].includes(key)) dynamicCssService.injectToolbar(styles);
+
+    // mark as having unsaved changes
+    if (markAsChanged) {
+      const { data } = useDataStore();
+      data.hasUnsavedChanges = true;
+    }
   };
 
   return {

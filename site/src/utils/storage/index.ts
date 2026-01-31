@@ -49,13 +49,13 @@ export class StorageService {
     return data ?? [];
   }
 
-  public async updateResume(data: DbResumeUpdate, newUpdateTime = true) {
+  public async updateResume(data: DbResumeUpdate, newUpdateTime = true, showToast = true) {
     const { data: updatedData, error } = await this._db.update(data, newUpdateTime);
 
     if (error) {
       // TODO: Use toast to show error message
       console.error("Update error:", error.message);
-    } else {
+    } else if (showToast) {
       const toast = useToast();
       toast.save();
     }

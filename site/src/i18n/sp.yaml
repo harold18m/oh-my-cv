@@ -1,5 +1,8 @@
 lang: Idioma
 
+autosave:
+  saving: Guardando...
+
 toggle_theme: Cambiar tema claro/oscuro
 open_toolbar: Abrir barra de herramientas
 close_toolbar: Cerrar barra de herramientas
@@ -29,6 +32,21 @@ dashboard:
   rename: Renombrar
   duplicate: Duplicar
   delete: Eliminar
+  delete_confirm:
+    title: ¿Eliminar CV?
+    description: Esta acción no se puede deshacer. El CV "{name}" será eliminado permanentemente.
+    cancel: Cancelar
+    confirm: Eliminar
+  search: Buscar CVs...
+  sort:
+    label: Ordenar
+    updated_desc: Actualizado (reciente)
+    updated_asc: Actualizado (antiguo)
+    created_desc: Creado (reciente)
+    created_asc: Creado (antiguo)
+    name_asc: Nombre (A-Z)
+    name_desc: Nombre (Z-A)
+  no_results: No se encontraron CVs
 
 toolbar:
   file:
