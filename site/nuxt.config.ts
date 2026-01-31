@@ -52,14 +52,13 @@ export default defineNuxtConfig({
         { name: "application-name", content: "Oh My CV!" },
         { name: "apple-mobile-web-app-title", content: "Oh My CV!" },
         { name: "msapplication-TileColor", content: "#fff" },
-        { property: "og:url", content: "https://ohmycv.app" },
         { property: "og:type", content: "website" }
       ]
     }
   },
 
   site: {
-    url: "https://ohmycv.app"
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://ohmycv.app"
   },
 
   pwa
