@@ -61,8 +61,6 @@ toolbar:
   theme_color: Theme Color
   font_family:
     title: Font Family
-    cjk: CJK
-    en: English
   font_size: Font Size
   margins:
     title: Margins

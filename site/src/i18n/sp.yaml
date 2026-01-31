@@ -61,8 +61,6 @@ toolbar:
   theme_color: Color y tema
   font_family:
     title: Fuente
-    cjk: CJK
-    en: Inglés
   font_size: Tamaño de Fuente
   margins:
     title: Margenes

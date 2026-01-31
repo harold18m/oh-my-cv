@@ -61,8 +61,6 @@ toolbar:
   theme_color: 主题色
   font_family:
     title: 字体
-    cjk: 中日韩
-    en: 英文
   font_size: 字号
   margins:
     title: 页边距

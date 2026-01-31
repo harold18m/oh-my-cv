@@ -3,7 +3,6 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup
 } from "unocss";
@@ -56,11 +55,6 @@ export default defineConfig({
     presetIcons({
       extraProperties: {
         display: "inline-block"
-      }
-    }),
-    presetWebFonts({
-      fonts: {
-        ui: "Lato:400,700"
       }
     }),
     presetAnimations(),

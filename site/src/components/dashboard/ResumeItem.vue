@@ -2,25 +2,38 @@
   <div w-56>
     <div h-80>
       <div class="resume-card group/card size-fit">
-        <nuxt-link
-          :to="$nuxt.$localePath(`/editor/${props.resume.id}`)"
-          class="block border overflow-hidden rounded-md ring-when-focus peer"
-          :style="{
-            width: `${size.w}px`,
-            height: `${size.h}px`
-          }"
-        >
-          <SharedResumeRender
-            :id="resume.id"
-            ref="renderRef"
-            :markdown="resume.markdown"
-            :styles="resume.styles"
-            class="origin-top-left"
-            :style="{
-              transform: `scale(${1 / PAPER.MM_TO_PX})`
-            }"
-          />
-        </nuxt-link>
+        <UiTooltipProvider :delay-duration="0">
+          <UiTooltip>
+            <UiTooltipTrigger as-child>
+              <nuxt-link
+                :to="$nuxt.$localePath(`/editor/${props.resume.id}`)"
+                class="block border overflow-hidden rounded-md ring-when-focus peer"
+                :style="{
+                  width: `${size.w}px`,
+                  height: `${size.h}px`
+                }"
+              >
+                <SharedResumeRender
+                  :id="resume.id"
+                  ref="renderRef"
+                  :markdown="resume.markdown"
+                  :styles="resume.styles"
+                  class="origin-top-left pointer-events-none"
+                  :style="{
+                    transform: `scale(${1 / PAPER.MM_TO_PX})`
+                  }"
+                />
+              </nuxt-link>
+            </UiTooltipTrigger>
+            <UiTooltipContent
+              side="top"
+              align="center"
+              class="max-w-56 text-center text-wrap bg-black text-white border-black"
+            >
+              {{ resume.name }}
+            </UiTooltipContent>
+          </UiTooltip>
+        </UiTooltipProvider>
 
         <DashboardResumeOptions
           class="opacity-0 group-hover/card:opacity-100 peer-focus-within:opacity-100 focus-within:opacity-100"
@@ -58,7 +71,6 @@ onMounted(async () => {
   dynamicCssService.injectCssEditor(props.resume.css, props.resume.id);
   // load Google fonts
   await googleFontsService.resolve(props.resume.styles.fontEN);
-  await googleFontsService.resolve(props.resume.styles.fontCJK);
   // set styles that are defined via toolbar
   dynamicCssService.injectToolbar(props.resume.styles, props.resume.id);
   // force update resume render

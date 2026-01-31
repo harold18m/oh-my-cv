@@ -1,5 +1,5 @@
 import GoogleFontsLoader from "@ohmycv/google-fonts-loader";
-import type { Font as GoogleFont, Subset } from "@ohmycv/google-fonts-loader";
+import type { Font as GoogleFont } from "@ohmycv/google-fonts-loader";
 import { useConstant, type Font } from "~/composables/constant";
 import type { ResumeStyles } from "~/composables/stores/style";
 
@@ -13,15 +13,6 @@ export class GoogleFontsService {
   }
 
   public includes = (font: Font) => !FONT.LOCAL.includes(font);
-
-  /**
-   * Whether the font is a CJK Google Font
-   *
-   * @param font Google Font
-   * @returns True if the font is a CJK Google Font, false otherwise
-   */
-  public isCJK = (font: GoogleFont) =>
-    FONT.GF.CJK_SUBSETS.some((subset: Subset) => font.subsets.includes(subset));
 
   /**
    * Load Google Fonts, if not already loaded
@@ -56,27 +47,20 @@ export class GoogleFontsService {
   }
 
   /**
-   * Get all available Google Fonts, separated by EN and CJK
-   * @returns List of EN and CJK Google Fonts
+   * Get all available Google Fonts
+   * @returns List of Google Fonts
    */
   public async get() {
     const loader = await this.loader();
 
     const en: GoogleFont[] = [];
-    const cjk: GoogleFont[] = [];
 
     if (loader) {
       const fonts = loader.getFontMap();
-
-      fonts.forEach((font) => {
-        this.isCJK(font) ? cjk.push(font) : en.push(font);
-      });
+      fonts.forEach((font) => en.push(font));
     }
 
-    return {
-      en,
-      cjk
-    };
+    return { en };
   }
 
   /**
@@ -102,10 +86,7 @@ export class GoogleFontsService {
    * @see {@link observer}
    */
   public presetObserver(styles: ResumeStyles) {
-    return this.observer([
-      styles.fontEN.fontFamily || styles.fontEN.name,
-      styles.fontCJK.fontFamily || styles.fontCJK.name
-    ]);
+    return this.observer([styles.fontEN.fontFamily || styles.fontEN.name]);
   }
 }
 

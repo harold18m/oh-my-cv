@@ -167,33 +167,3 @@
   font-weight: bold;
   src: url("~/assets/fonts/euclid/bolditalic.ttf") format("opentype");
 }
-
-/* Chinese */
-
-@font-face {
-  font-family: "LXGW WenKai";
-  font-style: normal;
-  font-weight: normal;
-  src: url("~/assets/fonts/lxgw-wen-kai/regular.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: "LXGW WenKai";
-  font-style: normal;
-  font-weight: bold;
-  src: url("~/assets/fonts/lxgw-wen-kai/bold.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: "HKST";
-  font-style: normal;
-  font-weight: normal;
-  src: url("~/assets/fonts/hkst/w7.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: "HKST";
-  font-style: normal;
-  font-weight: bold;
-  src: url("~/assets/fonts/hkst/w9.ttf") format("opentype");
-}
