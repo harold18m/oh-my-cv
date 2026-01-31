@@ -6,7 +6,7 @@ export const DEFAULT_STYLES = {
   marginH: 45,
   lineHeight: 1.3,
   paragraphSpace: 5,
-  themeColor: "#377bb5",
+  themeColor: "#000000",
   fontEN: {
     name: "Arial"
   },
@@ -15,110 +15,94 @@ export const DEFAULT_STYLES = {
 } as ResumeStyles;
 
 export const DEFAULT_MD_CONTENT = `---
-name: Haha Ha
+name: Harold Joel Medrano Canchari 
 header:
   - text: |
-      <span style="font-size: 1.2em; font-weight: bold;">Applying for: Cooking Engineer</span>
-  - text: <span class="iconify" data-icon="tabler:phone"></span> (+1) 123-456-7890
+      <span style="font-size: 1.4em; font-weight: bold;">Full-Stack Developer</span>
+  - text: <span class="iconify" data-icon="tabler:location"></span> Lima, Perú
     newLine: true
-  - text: <span class="iconify" data-icon="tabler:mail"></span> icancook@email.com
-    link: mailto:icancook@email.com
-  - text: <span class="iconify" data-icon="tabler:brand-github"></span> Renovamen
-    link: https://github.com/Renovamen
-  - text: <span class="iconify" data-icon="charm:person"></span> zxh.me
-    link: https://zxh.me
+  - text: <span class="iconify" data-icon="tabler:phone"></span> +51 991 835 651
+  - text: <span class="iconify" data-icon="tabler:mail"></span> haroldmedrano33@gmail.com
+    link: mailto:haroldmedrano33@gmail.com
+  - text: <span class="iconify" data-icon="tabler:brand-linkedin"></span> in/haroldmedrano18
+    link: https://linkedin.com/in/haroldmedrano18
+  - text: <span class="iconify" data-icon="tabler:world"></span> h18m.tech
+    link: https://h18m.tech
 ---
 
-<!-- Important: Replace all template content, especially contact details, with your own information. -->
+## 
+_Desarrollador Full-Stack con experiencia construyendo productos web privados tipo dashboard, desde arquitectura y backend hasta frontend y despliegue en producción. He trabajado en sistemas con autenticación, roles/permisos, métricas y reporting, enfocados en uso interno real, seguridad y mantenibilidad._
 
-<!-- Important: When updating your email address, remember to change both the "text" (visible text) and the "link" (underlying hyperlink) fields. -->
+## Experiencia Profesional
 
+**Frontend / AI Developer (Contract)**  
+~ **Lima, Perú**  
 
-## Education
+Cimark Comunicación Corporativa 
+~ _Setiembre 2025 – Octubre 2025_
 
-**Harvest University**
-  ~ Cambridge, MA
+- Desarrollo de interfaces web privadas conectadas a sistemas empresariales.
+- Integración frontend–backend con pipelines de datos asincrónicos (RAG).
+- Implementación de autenticación y control de acceso para usuarios internos.
+- Optimización de performance y reducción de latencia percibida (~25%).
+- Participación en despliegues en entornos Linux y AWS Serverless.
 
-M.S. in Cooking Science
-  ~ 09/2021 - 01/2023
+**Frontend & Full-Stack Developer Junior**  
+~ **Lima, Perú**  
 
-**Huangdu Institute of Tofu**
-  ~ Shanghai, China
+MyWorkin
+~ _Mayo 2025 – Agosto 2025_
 
-B.Eng. in Salad Engineering
-  ~ 09/2016 - 07/2020
+- Construcción de dashboards internos para visualización de métricas y reporting.
+- Desarrollo de frontend con React, Next.js y TypeScript.
+- Integración de APIs y lógica de negocio en backend (Python / Node.js).
+- Implementación de flujos de estado complejos orientados a producto data-driven.
+- Mejora de UX para usuarios no técnicos.
 
+**Frontend / Full-Stack Developer Junior**  
+~ **Lima, Perú**  
 
-## Publications
+Cimark Comunicación Corporativa
+~ _Junio 2024 – Abril 2025_
 
-[~P1]: **Eating is All You Need**
+- Desarrollo y mantenimiento de productos web privados para uso empresarial.
+- Implementación de autenticación, roles y permisos.
+- Trabajo end-to-end: frontend, backend, base de datos y despliegue.
+- Optimización de consultas y modelos de datos en PostgreSQL.
+- Colaboración directa con stakeholders no técnicos.
 
-    <u>Haha Ha</u>, San Zhang
+## Proyectos Relevantes
 
-    *Conference on Nutritional Ingredients Processing Systems (NIPS), 2099*
+**ERP MULTILIMP SAC — Dashboard privado / Sistema interno**
 
-[~P2]: **You Only Cook Once: Unified, Real-Time Mapo Tofu Recipe**
+- Sistema web privado para gestión de ventas, inventario, proveedores y reportes.
+- Autenticación con roles y permisos por área.
+- Dashboards de métricas operativas y financieras.
+- Desarrollo full-stack end-to-end (React + TypeScript / Node.js – Express / PostgreSQL).
+- Despliegue en producción y uso real por usuarios internos.
 
-    <u>Haha Ha</u>, San Zhang, Si Li, Wu Wang
+## Educación
 
-    *Culinary Visualization and Potato Roasting Conference (CVPR), 2077 **(Best Paper Honorable Mention)***
+**Diseño y Desarrollo de Software**  
+~ **Lima, Perú**
 
+TECSUP  
+~ _Marzo 2022 – Diciembre 2024_
 
-## Experience
-
-**Cooking Engineer Intern**
-  ~ Microwavesoft
-  ~ 07/2021 - Present
-
-- Developed an innovative, versatile cooking methodology applicable across diverse ingredients, incorporating and improving upon recent culinary trends
-- Created a streamlined cream of mushroom soup recipe, achieving results comparable to complex state-of-the-art techniques through a novel mushroom-cutting approach; published in NIPS 2099 (see [~P1])
-- Designed a specialized cooking pan that enhanced research efficiency for team members
-
-
-**Engineering Chef Intern**
-  ~ University of California, Berkebake
-  ~ 08/2020 - Present
-
-- Developed a precise mapo tofu quality assessment technique using thermometer-based measurements
-- Invented a rapid stir-frying algorithm for tofu cooking, replacing vague instructions like "add as much as you can" with specific hot sauce measurements; published in CVPR 2077 (see [~P2])
-- Outperformed SOTA cooking methods in both efficiency and quality across experiments with popular tofu types
-
-
-**Student Chef**
-  ~ Cabbage Melon University
-  ~ 03/2020 - 06/2020
-
-- Developed an innovative mapo tofu consumption framework utilizing a spoon-chopstick combination
-- Engineered a filtering method for tofu dataset creation, inspired by bean grinding techniques
-- Established two new metrics for evaluating eating plan novelty and diversity
-- Significantly surpassed existing methods and baselines in diversity, novelty, and coherence
+- Egresado en el Quinto Superior.
 
 
-**Research Chef Intern**
-  ~ Snapchopstick
-  ~ 07/2018 - 08/2018
+## Habilidades Técnicas
 
-- Designed two novel sandwiches by repurposing breads and meat from traditional bacon cheeseburgers, maximizing resource efficiency
-- Leveraged structure duality to boost cooking speed for two complementary tasks based on shared ingredients
-- Surpassed strong baselines on QWE'15 and ASDF'14 dataset
+**Frontend:** React, Next.js, TypeScript  
+**Backend:** Node.js, Express, FastAPI  
+**Bases de datos:** PostgreSQL, Prisma  
+**Infra & Deploy:** Docker, AWS, Vercel, Render  
+**Producto:** Dashboards, métricas, reporting, APIs de terceros  
 
-
-## Awards and Honors
-
-**Gold**, International Collegiate Catching Fish Contest (ICCFC)
-  ~ 2018
-
-**First Prize**, China National Scholarship for Outstanding Dragon Killers
-  ~ 2017, 2018
-
-
-## Skills
-
-**Programming Languages:** <span class="iconify" data-icon="vscode-icons:file-type-python"></span> Frython, <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaSauce / <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeSauce, <span class="iconify" data-icon="vscode-icons:file-type-cpp2"></span> Cheese++, <span class="iconify" data-icon="logos:java" data-inline="false"></span> Java Bean
-
-**Tools and Frameworks:** GrillHub, PanFlow, TensorFork, SpiceNet, $\\LaTeX$
-
-**Languages:** Chinese (native), English (proficient)
+## Idiomas
+- Español: nativo  
+- Inglés: intermedio (B1)
 `;
 
 export const DEFAULT_CSS_CONTENT = `/* Backbone CSS for Resume Template 1 */
@@ -168,12 +152,12 @@ ${PREVIEW_SELECTOR} h2 {
 
 ${PREVIEW_SELECTOR} ul,
 ${PREVIEW_SELECTOR} ol {
-  padding-left: 1.5em;
-  margin: 0.2em 0;
+  padding-left: 2em;
+  margin: 0.5em 0;
 }
 
 ${PREVIEW_SELECTOR} ul {
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 ${PREVIEW_SELECTOR} ol {
