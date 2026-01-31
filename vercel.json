@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm release",
+  "buildCommand": "pnpm run release",
   "installCommand": "pnpm install",
   "outputDirectory": "site/.output/public",
   "framework": null

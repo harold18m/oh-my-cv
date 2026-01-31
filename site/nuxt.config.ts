@@ -3,6 +3,7 @@ import { i18n } from "./configs/i18n";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2026-01-31",
   srcDir: "src/",
 
   modules: [
