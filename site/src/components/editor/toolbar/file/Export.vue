@@ -39,9 +39,10 @@
 
 <script lang="ts" setup>
 import { downloadFile } from "@renovamen/utils";
+import { sanitizeResumeName } from "~/utils";
 
 const { data } = useDataStore();
-const saveName = computed(() => data.resumeName.trim().replace(/\s+/g, "_"));
+const saveName = computed(() => sanitizeResumeName(data.resumeName));
 
 // Export as PDF
 const exportPDF = () => {
