@@ -1,9 +1,13 @@
 <template>
-  <header class="hstack justify-between pl-4 pr-1">
+  <header class="grid grid-cols-[auto_1fr_auto] items-center pl-4 pr-1">
     <nuxt-link class="hstack gap-x-2" :to="$nuxt.$localePath('/')">
       <SharedLogo text-base />
       <div text-lg><SharedBrandName /></div>
     </nuxt-link>
+
+    <div class="flex justify-center overflow-hidden px-4">
+      <slot name="center" />
+    </div>
 
     <div class="hstack">
       <UiButton

@@ -1,6 +1,15 @@
 <template>
   <div id="editor-page" class="flex flex-col">
     <SharedHeader>
+      <template #center>
+        <span
+          v-if="data.loaded && data.resumeName"
+          class="text-sm text-muted-foreground"
+        >
+          {{ data.resumeName }}
+        </span>
+      </template>
+
       <template #tail>
         <UiButton
           variant="ghost-secondary"
